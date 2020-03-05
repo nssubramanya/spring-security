@@ -1,0 +1,8 @@
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE users (
+	id LONG PRIMARY KEY AUTO_INCREMENT,
+	username VARCHAR(64) NOT NULL,
+	password VARCHAR(64) NOT NULL,
+	enrolled_on DATE NOT NULL
+);

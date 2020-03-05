@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+	layout:decorate="~{layout}">
+<title>Edit User</title>
+<head>
+</head>
+<body>
+	<h1 layout:fragment="header">Users : Edit</h1>
+	<div layout:fragment="content" class="container">
+		<form action="#" th:action="@{/users/save}" th:object="${user}"
+			method="post">
+			<h2 class="h3 mb-3 font-weight-normal">Update User Details:</h2>
+			<input type="text" th:field="*{id}" class="form-control" readonly="readonly" /> <label
+				for="inputUName" class="sr-only">Username:</label> <input
+				type="text" id="inputUName" class="form-control"
+				placeholder="Username" required autofocus th:field="*{username}" />
+			<input type="hidden" th:field="*{password}"> <input
+				type="text" readonly="readonly" class="form-control"
+				th:field="*{enrolledOn}" />
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Update</button>
+		</form>
+	</div>
+</body>
+</html>

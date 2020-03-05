@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="">
+<meta name="author" content="">
+<!-- <link rel="icon" href="/docs/4.1/assets/img/favicons/favicon.ico"> -->
+
+<title>Main Layout</title>
+
+<!-- Bootstrap core CSS -->
+<link rel="stylesheet"
+	th:href="@{/webjars/bootstrap/4.4.1/css/bootstrap.min.css}" />
+
+<!-- Custom styles for this template -->
+<link rel="stylesheet" th:href="@{/css/sticky-footer-navbar.css}">
+</head>
+
+<body>
+
+	<header>
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+			<a class="navbar-brand" href="#">User Manager</a>
+			<button class="navbar-toggler" type="button" data-toggle="collapse"
+				data-target="#navbarCollapse" aria-controls="navbarCollapse"
+				aria-expanded="false" aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarCollapse">
+				<ul class="navbar-nav mr-auto">
+					<li class="nav-item active"><a class="nav-link" href="#">Home
+							<span class="sr-only">(current)</span>
+					</a></li>
+					<li class="nav-item active"><a class="nav-link" href="/users">Users</a></li>
+					<li class="nav-item"><a class="nav-link disabled" href="#">Disabled</a>
+					</li>
+				</ul>
+				<!-- <form class="form-inline mt-2 mt-md-0">
+					<input class="form-control mr-sm-2" type="text"
+						placeholder="Search" aria-label="Search">
+					<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+				</form> -->
+			</div>
+		</nav>
+	</header>
+	
+	<!-- page content -->
+	<main role="main" class="container">
+		<h1 layout:fragment="header">Fake Header</h1>
+		<div layout:fragment="content">Fake content</div>
+	</main>
+
+	<!-- Fixed Footer -->
+	<footer class="footer">
+		<div class="container">
+			<span class="text-muted">Anveshi Tech Pvt Ltd.</span>
+		</div>
+	</footer>
+
+	<!-- Add JS Scripts -->
+</body>
+</html>
+

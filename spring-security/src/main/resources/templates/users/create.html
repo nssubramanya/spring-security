@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+	layout:decorate="~{layout}">
+<title>Create User</title>
+<head>
+</head>
+<body>
+	<h1 layout:fragment="header">Users : Create</h1>
+	<div layout:fragment="content" class="container">
+		<form th:action="@{/users/save}" th:object="${user}" method="post">
+			<h2 class="h3 mb-3 font-weight-normal">Enter User Details:</h2>
+			<label for="inputUName" class="sr-only">Username:</label><input
+				type="text" id="inputUName" class="form-control"
+				placeholder="Username" required autofocus th:field="*{username}" />
+			<label for="inputPassword" class="sr-only">Password:</label> <input
+				type="password" id="inputPassword" class="form-control"
+				placeholder="Password" required th:field="*{password}" />
+			<button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+		</form>
+	</div>
+</body>
+</html>
